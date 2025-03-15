@@ -4,16 +4,16 @@ import math
 pygame.init()
 
 
-screen = pygame.display.set_mode((800, 600))
-clock = pygame.time.Clock()
+screen = pygame.display.set_mode((800, 600)) # creating the window
+clock = pygame.time.Clock() # this is for controlling a fps rate
 
 
-pygame.display.set_caption("Mickey clock")
+pygame.display.set_caption("Mickey clock") # just caption
 
 
-leftarm = pygame.image.load("leftarm.png")
-rightarm = pygame.image.load("rightarm.png")
-mainclock = pygame.transform.scale(pygame.image.load("clock.png"), (800, 600))
+leftarm = pygame.image.load("images/leftarm.png") #loads leftarm photo
+rightarm = pygame.image.load("images/rightarm.png") # loads rightarm photo
+mainclock = pygame.transform.scale(pygame.image.load("images/clock.png"), (800, 600))
 
 done = False
 
