@@ -1,3 +1,4 @@
+# this is mickey clock and if you click "run" button you will see the clock 
 import pygame 
 import time
 import math
@@ -13,25 +14,25 @@ pygame.display.set_caption("Mickey clock") # just caption
 
 leftarm = pygame.image.load("images/leftarm.png") #loads leftarm photo
 rightarm = pygame.image.load("images/rightarm.png") # loads rightarm photo
-mainclock = pygame.transform.scale(pygame.image.load("images/clock.png"), (800, 600))
+mainclock = pygame.transform.scale(pygame.image.load("images/clock.png"), (800, 600)) # adjusting the size of clock
 
 done = False
 
 while not done: 
-    for event in pygame.event.get():
+    for event in pygame.event.get(): 
         if event.type == pygame.QUIT:
             done = True
  
-    current_time = time.localtime()
-    minute = current_time.tm_min
-    second = current_time.tm_sec
+    current_time = time.localtime() # getting time
+    minute = current_time.tm_min # giving minutes
+    second = current_time.tm_sec # giving seconds
     
      
     minute_angle = minute * 6    + (second / 60) * 6   
     second_angle = second * 6  
     
    
-    screen.blit(mainclock, (0,0))
+    screen.blit(mainclock, (0,0)) # drawing the clock in the window aftert loading 
     
    
     rotated_rightarm = pygame.transform.rotate(pygame.transform.scale(rightarm, (800, 600)), -minute_angle)

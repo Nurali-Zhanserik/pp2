@@ -1,4 +1,7 @@
+# this is for the circle which just gets commanded to move in any direction
+# as the output you should see the screen with the red circle and it moves
 import pygame
+import os
 
 pygame.init()
 screen = pygame.display.set_mode((500, 400))
@@ -21,8 +24,8 @@ while not done:
         if pressed[pygame.K_LEFT] and x > 25:  
                 x -= 20  
         if pressed[pygame.K_RIGHT] and x < 475:  
-                x += 20  
+                x += 20        
 
         
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(40)
